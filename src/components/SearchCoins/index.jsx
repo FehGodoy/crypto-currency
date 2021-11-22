@@ -10,7 +10,7 @@ function Home() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=price&per_page=20&page=1&sparkline=false')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=price&per_page=70&page=1&sparkline=false')
     .then(res => {
       setCoins(res.data);      
     }).catch(error => console.error(error))
